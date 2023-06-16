@@ -1,0 +1,356 @@
+@import url('https://fonts.cdnfonts.com/css/games');
+@import url('https://fonts.cdnfonts.com/css/daysans');
+@import url('https://fonts.cdnfonts.com/css/novela');
+@import url('https://fonts.cdnfonts.com/css/iphone-bohassson');
+@import url('https://fonts.cdnfonts.com/css/seaside-groove-demo');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif', 'arial';
+}
+body{
+    min-height: 100%;
+    background: url('bgbgbg.gif') no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+nav .logosName{
+    display: flex;
+    text-align: center;
+}
+.logo .menuIcon{
+    color: #fff;
+    font-size: 24px;
+    margin-right: 1500px;
+    cursor: pointer;
+}
+.logo .navMenu{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+nav .logosName{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 70px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+}
+.logo .logoName{
+    color: #fff;
+    /* font-family: 'Death Squire', sans-serif; */
+    font-family: 'Novela', sans-serif;
+    font-size: 60px;
+    margin-left: 490px;
+    margin-top: -10px;
+    font-weight: 900;
+}
+nav .sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    background-color: #1c1c1c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+nav.open .sidebar{
+    left: 0;
+}
+.sidebar .sidebarContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+.sidebarContent .profile{
+    position: fixed;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.sidebarContent .users{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -50px;
+    padding: 20px 16px;
+    color: #fff;
+} 
+.sidebarContent .text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 30px 16px;
+    color: #fff;
+}
+.sidebarContent .list{
+    list-style:  none;
+}
+.navAbout .contact{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+.sidebarContent .webinfo{
+    color: #fff;
+    padding: 4px;
+}
+.sidebarContent .contacts{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 3px;
+    margin-top: 5px;
+    padding: 4px;
+    color: #fff;
+}
+.sidebarContent .about{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+    padding: 4px;
+    margin-left: 3px;
+    color: #fff;
+}
+.list .navLink{
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.navLink:hover{
+    background-color: #DCDCDC;
+}
+.navLink .settingIcon{
+    margin-right: 14px;
+    font-size: 20px;
+    color: #707070;
+}
+.navLink .link{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+.navLink:hover .settingIcon,
+.navLink:hover .link{
+    color: black;
+}
+.navAbout .settingIcon{
+    margin-right: 14px;
+    font-size: 20px;
+    color: #707070;
+}
+.navAbout .contact{
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 200%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay{
+    opacity: 1;
+    left: 255px;
+    pointer-events: auto;
+}
+.hangmanBox{
+    position: absolute;
+    margin-top: 850px;
+    left: 7px;
+    width: 500px;
+    height: 250px;
+    background: transparent;
+    /* border: 5px solid #004830; */
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    justify-content: center;
+}
+/* .box{
+    margin-top: 850px;
+    left: 7px;
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background: linear-gradient(#00A86B, #98FB98);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: #222; 
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+} */
+.wordSBox{
+    position: absolute;
+    margin-top: 850px;
+    left: 518px;
+    width: 500px;
+    height: 250px;
+    background: transparent;
+    /* border: 5px solid #004830; */
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    justify-content: center;
+}
+/* .wordSBox{
+    margin-top: 850px;
+    left: 518px;
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background: linear-gradient(#00A86B, #98FB98);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wordSBox form{
+    position: absolute;
+    inset: 4px;
+    background: #222; 
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+} */
+.quizBox{
+    position: absolute;
+    margin-top: 850px;
+    left: 1030px;
+    width: 500px;
+    height: 250px;
+    background: transparent;
+    /* border: 5px solid #004830; */
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    justify-content: center;
+}
+/* .quizBox{
+    margin-top: 850px;
+    left: 1030px;
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background: linear-gradient(#00A86B, #98FB98);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.quizBox form{
+    position: absolute;
+    inset: 4px;
+    background: transparent; 
+    padding: 50px 40px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, .5);
+    backdrop-filter: blur(50px);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+} */
+.input-group .content{
+    position: absolute;
+    inset: 4px;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.input-group .picGame{
+    display: flex;
+    margin-left: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+.input-group .nameHangman{
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 235px;
+    /* font-family: 'DAYSANS', sans-serif; */
+    font-family: 'iPhone-BoHasssoN', sans-serif;
+}
+.input-group .btnGame{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 243px;
+    width: 150px;
+    height: 65px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-family: 'iPhone-BoHasssoN', sans-serif;
+    font-weight: 900;
+    transition: .5s;
+}
+.input-group .btnGame:hover{
+        background: white;
+        color: #123524;
+}
+
+
+
+
+
+
